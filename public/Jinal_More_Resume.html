@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinal More - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #111;
+            background-color: #fff;
+            max-width: 800px; /* A4 width proportion */
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* ATS Friendly Typography */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #111;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .item {
+            margin-bottom: 12px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .item-subtitle {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        .item-date {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .item-location {
+            font-size: 14px;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .skills-container {
+            font-size: 14px;
+        }
+
+        .skills-category {
+            font-weight: 600;
+        }
+
+        /* Print Settings for PDF export */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+            @page {
+                margin: 1.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jinal More</h1>
+        <div class="contact-info">
+            Vadodara, India | 
+            <a href="mailto:jinallmore619@gmail.com">jinallmore619@gmail.com</a> | 
+            <a href="https://linkedin.com/in/jinal-more-b5a040363" target="_blank">LinkedIn</a> | 
+            <a href="https://github.com/jinalmore019" target="_blank">GitHub</a> | 
+            <a href="https://devfolio.co/@jinal19" target="_blank">Devfolio</a>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">Education</h2>
+        
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Dharmsinh Desai University (DDU)</span>
+                <span class="item-location">Nadiad, India</span>
+            </div>
+            <div class="item-header">
+                <span class="item-subtitle">B.Tech in Computer Engineering</span>
+                <span class="item-date">2025 &ndash; 2028</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">The Maharaja Sayajirao University of Baroda (MSU)</span>
+                <span class="item-location">Vadodara, India</span>
+            </div>
+            <div class="item-header">
+                <span class="item-subtitle">Diploma in Information Technology</span>
+                <span class="item-date">2021 &ndash; 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="item" style="margin-bottom: 6px;">
+                <span class="skills-category">Languages & Frameworks:</span> Java, JavaScript, React, Node.js, Spring Boot, HTML/CSS
+            </div>
+            <div class="item" style="margin-bottom: 6px;">
+                <span class="skills-category">Core Concepts:</span> Data Structures and Algorithms (DSA), Full Stack Web Development, Object-Oriented Programming (OOP)
+            </div>
+            <div class="item">
+                <span class="skills-category">Tools & Technologies:</span> Git, GitHub, MySQL, Computer Networks
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Enterprise Library System</span>
+                <span class="item-date">React, Spring Boot, Java, MySQL</span>
+            </div>
+            <ul>
+                <li>Developed a professional, enterprise-grade library management web application designed for scalability.</li>
+                <li>Implemented automated business logic for overdue fine calculations and strict due date tracking.</li>
+                <li>Integrated secure, database-backed authentication with user registration and password recovery.</li>
+                <li>Built a premium card-based frontend using React with dynamic image support and CSV data exporting.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">EcoFeed &ndash; Rescue Food, Reduce Waste</span>
+                <span class="item-date">Full Stack Web Development</span>
+            </div>
+            <ul>
+                <li>Engineered a real-time coordination platform connecting food donors, NGOs, and volunteers to efficiently redistribute surplus edible food.</li>
+                <li>Built an innovative waste-management module to convert inedible food into fertilizer via local biogas plants.</li>
+                <li>Designed an intuitive UI to minimize food spoilage and optimize logistics for food distribution to underserved communities.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">NutriTrack &ndash; Fitness & Diet Assistant</span>
+                <span class="item-date">React, Node.js, HealthTech</span>
+            </div>
+            <ul>
+                <li>Created a personalized health application to assist users in tracking their fitness goals.</li>
+                <li>Implemented features for custom diet planning, real-time calorie tracking, and dynamic BMI calculation.</li>
+                <li>Added notification systems to keep users consistently motivated and informed regarding their daily progress.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">MindHaven &ndash; Mental Health Platform</span>
+                <span class="item-date">Full Stack Web Development</span>
+            </div>
+            <ul>
+                <li>Developed a comprehensive online platform dedicated to promoting mental health awareness and wellbeing.</li>
+                <li>Created a safe, accessible space for users to explore wellness resources and track their mental health journey.</li>
+                <li>Focused on accessibility and user experience to provide seamless navigation and empathetic design.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Extracurricular & Achievements</h2>
+        <ul>
+            <li><strong>National Cadet Corps (NCC):</strong> Hold an NCC 'B' Certificate with the rank of Lance Corporal (LCPL).</li>
+            <li>Actively participated in multiple hackathons, demonstrating rapid prototyping and collaborative problem-solving skills.</li>
+            <li>Continuously upskilling in Full Stack technologies to stay current with industry standards.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
