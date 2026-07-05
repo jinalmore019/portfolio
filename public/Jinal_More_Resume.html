@@ -15,100 +15,127 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.5;
+            line-height: 1.55;
             color: #111;
             background-color: #fff;
-            max-width: 800px; /* A4 width proportion */
+            max-width: 820px;
             margin: 0 auto;
-            padding: 40px;
+            padding: 36px 40px;
         }
 
-        /* ATS Friendly Typography */
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
-            margin-bottom: 5px;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
         }
 
         .contact-info {
             text-align: center;
-            font-size: 14px;
-            margin-bottom: 20px;
+            font-size: 13px;
+            margin-bottom: 6px;
             color: #333;
+            line-height: 1.8;
         }
 
         .contact-info a {
-            color: #111;
+            color: #1a0dab;
             text-decoration: none;
-            margin: 0 5px;
         }
 
         .contact-info a:hover {
             text-decoration: underline;
         }
 
+        .contact-info .separator {
+            margin: 0 6px;
+            color: #999;
+        }
+
         .section-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
-            border-bottom: 1px solid #000;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            border-bottom: 2px solid #111;
+            margin-top: 16px;
+            margin-bottom: 8px;
             padding-bottom: 2px;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         .item {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .item-title {
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .item-subtitle {
             font-weight: 500;
             font-style: italic;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .item-date {
-            font-size: 14px;
+            font-size: 13px;
             color: #444;
+            white-space: nowrap;
         }
 
         .item-location {
-            font-size: 14px;
+            font-size: 13px;
             color: #444;
+            white-space: nowrap;
         }
 
         ul {
             list-style-type: disc;
-            margin-left: 20px;
-            font-size: 14px;
+            margin-left: 18px;
+            font-size: 13px;
         }
 
         li {
-            margin-bottom: 4px;
+            margin-bottom: 3px;
+            line-height: 1.5;
         }
 
         .skills-container {
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        .skills-row {
+            margin-bottom: 4px;
         }
 
         .skills-category {
-            font-weight: 600;
+            font-weight: 700;
+        }
+
+        .objective {
+            font-size: 13px;
+            color: #222;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .two-col {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .two-col > div {
+            flex: 1;
         }
 
         /* Print Settings for PDF export */
@@ -119,78 +146,134 @@
                 max-width: 100%;
             }
             @page {
-                margin: 1.5cm;
+                margin: 1.2cm 1.5cm;
             }
+            .contact-info a {
+                color: #111;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 20px; }
+            .item-header { flex-direction: column; }
+            .two-col { flex-direction: column; gap: 0; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ==================== HEADER ==================== -->
     <header>
         <h1>Jinal More</h1>
         <div class="contact-info">
-            Vadodara, India | 
-            <a href="mailto:jinallmore619@gmail.com">jinallmore619@gmail.com</a> | 
-            <a href="https://linkedin.com/in/jinal-more-b5a040363" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/jinalmore019" target="_blank">GitHub</a> | 
-            <a href="https://devfolio.co/@jinal19" target="_blank">Devfolio</a>
+            Vadodara, Gujarat, India<br>
+            <a href="mailto:jinallmore619@gmail.com">jinallmore619@gmail.com</a>
+            <span class="separator">|</span>
+            <a href="https://linkedin.com/in/jinal-more-b5a040363" target="_blank">linkedin.com/in/jinal-more</a>
+            <span class="separator">|</span>
+            <a href="https://github.com/jinalmore019" target="_blank">github.com/jinalmore019</a>
+            <span class="separator">|</span>
+            <a href="https://devfolio.co/@jinal19" target="_blank">devfolio.co/@jinal19</a>
         </div>
     </header>
 
+    <!-- ==================== CAREER OBJECTIVE ==================== -->
+    <section>
+        <h2 class="section-title">Career Objective</h2>
+        <p class="objective">
+            Motivated and detail-oriented Computer Engineering student with a strong foundation in Full Stack Web Development, Java, and Data Structures & Algorithms. Seeking an internship/placement opportunity to apply technical skills in a professional environment, contribute to impactful projects, and grow as a software developer. Proven ability to build end-to-end web applications and collaborate in team-based settings through hackathons and academic projects.
+        </p>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
     <section>
         <h2 class="section-title">Education</h2>
         
         <div class="item">
             <div class="item-header">
-                <span class="item-title">Dharmsinh Desai University (DDU)</span>
-                <span class="item-location">Nadiad, India</span>
+                <span class="item-title">Dharmsinh Desai University (DDU), Nadiad</span>
+                <span class="item-date">Aug 2025 &ndash; Present</span>
             </div>
             <div class="item-header">
-                <span class="item-subtitle">B.Tech in Computer Engineering</span>
-                <span class="item-date">2025 &ndash; 2028</span>
+                <span class="item-subtitle">Bachelor of Technology (B.Tech) in Computer Engineering</span>
             </div>
+            <ul>
+                <li>Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems, Software Engineering.</li>
+            </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title">The Maharaja Sayajirao University of Baroda (MSU)</span>
-                <span class="item-location">Vadodara, India</span>
+                <span class="item-title">The Maharaja Sayajirao University of Baroda (MSU), Vadodara</span>
+                <span class="item-date">Aug 2021 &ndash; May 2025</span>
             </div>
             <div class="item-header">
                 <span class="item-subtitle">Diploma in Information Technology</span>
-                <span class="item-date">2021 &ndash; 2025</span>
             </div>
+            <ul>
+                <li>Completed foundational studies in IT including programming, web development, networking, and database management.</li>
+                <li>Engaged in real-world academic projects and participated in technical events and hackathons.</li>
+            </ul>
         </div>
     </section>
 
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
     <section>
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-container">
-            <div class="item" style="margin-bottom: 6px;">
-                <span class="skills-category">Languages & Frameworks:</span> Java, JavaScript, React, Node.js, Spring Boot, HTML/CSS
+            <div class="skills-row">
+                <span class="skills-category">Programming Languages:</span> Java, JavaScript, HTML5, CSS3, SQL
             </div>
-            <div class="item" style="margin-bottom: 6px;">
-                <span class="skills-category">Core Concepts:</span> Data Structures and Algorithms (DSA), Full Stack Web Development, Object-Oriented Programming (OOP)
+            <div class="skills-row">
+                <span class="skills-category">Frameworks & Libraries:</span> React.js, Node.js, Spring Boot, Express.js
             </div>
-            <div class="item">
-                <span class="skills-category">Tools & Technologies:</span> Git, GitHub, MySQL, Computer Networks
+            <div class="skills-row">
+                <span class="skills-category">Databases:</span> MySQL, MongoDB
+            </div>
+            <div class="skills-row">
+                <span class="skills-category">Developer Tools:</span> Git, GitHub, VS Code, IntelliJ IDEA, Postman, npm
+            </div>
+            <div class="skills-row">
+                <span class="skills-category">Core Concepts:</span> Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), REST APIs, Full Stack Development, Responsive Web Design, DBMS, Computer Networks
+            </div>
+            <div class="skills-row">
+                <span class="skills-category">Soft Skills:</span> Problem Solving, Team Collaboration, Time Management, Adaptability, Communication
             </div>
         </div>
     </section>
 
+    <!-- ==================== PROJECTS ==================== -->
     <section>
         <h2 class="section-title">Projects</h2>
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title">Enterprise Library System</span>
+                <span class="item-title">Enterprise Library Management System</span>
                 <span class="item-date">React, Spring Boot, Java, MySQL</span>
             </div>
+            <div style="font-size: 12px; color: #555; margin-bottom: 3px;">
+                <a href="https://github.com/jinalmore019/Library-Management-System" target="_blank" style="color: #1a0dab; text-decoration: none;">GitHub Repository</a>
+            </div>
             <ul>
-                <li>Developed a professional, enterprise-grade library management web application designed for scalability.</li>
-                <li>Implemented automated business logic for overdue fine calculations and strict due date tracking.</li>
-                <li>Integrated secure, database-backed authentication with user registration and password recovery.</li>
-                <li>Built a premium card-based frontend using React with dynamic image support and CSV data exporting.</li>
+                <li>Developed a full-stack, enterprise-grade library management web application handling book cataloging, member management, and transaction tracking.</li>
+                <li>Implemented automated business logic for overdue fine calculations, due date tracking, and real-time availability status updates.</li>
+                <li>Integrated secure, database-backed authentication system with user registration, login, and password recovery functionality.</li>
+                <li>Built a premium, responsive card-based UI using React with dynamic image support and CSV data export for reporting.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">NutriTrack &ndash; Personalized Fitness & Diet Assistant</span>
+                <span class="item-date">React, Node.js</span>
+            </div>
+            <div style="font-size: 12px; color: #555; margin-bottom: 3px;">
+                <a href="https://github.com/jinalmore019/NUTRI_TRACK" target="_blank" style="color: #1a0dab; text-decoration: none;">GitHub Repository</a>
+            </div>
+            <ul>
+                <li>Created a personalized health and fitness application enabling users to set fitness goals, track daily calorie intake, and monitor progress.</li>
+                <li>Implemented features including custom diet plan generation, real-time calorie tracking, and dynamic BMI calculation with visual charts.</li>
+                <li>Built a notification and reminder system to keep users consistently motivated and informed regarding their daily health targets.</li>
             </ul>
         </div>
 
@@ -199,45 +282,79 @@
                 <span class="item-title">EcoFeed &ndash; Rescue Food, Reduce Waste</span>
                 <span class="item-date">Full Stack Web Development</span>
             </div>
-            <ul>
-                <li>Engineered a real-time coordination platform connecting food donors, NGOs, and volunteers to efficiently redistribute surplus edible food.</li>
-                <li>Built an innovative waste-management module to convert inedible food into fertilizer via local biogas plants.</li>
-                <li>Designed an intuitive UI to minimize food spoilage and optimize logistics for food distribution to underserved communities.</li>
-            </ul>
-        </div>
-
-        <div class="item">
-            <div class="item-header">
-                <span class="item-title">NutriTrack &ndash; Fitness & Diet Assistant</span>
-                <span class="item-date">React, Node.js, HealthTech</span>
+            <div style="font-size: 12px; color: #555; margin-bottom: 3px;">
+                <a href="https://devfolio.co/@jinal19" target="_blank" style="color: #1a0dab; text-decoration: none;">Devfolio Profile</a>
             </div>
             <ul>
-                <li>Created a personalized health application to assist users in tracking their fitness goals.</li>
-                <li>Implemented features for custom diet planning, real-time calorie tracking, and dynamic BMI calculation.</li>
-                <li>Added notification systems to keep users consistently motivated and informed regarding their daily progress.</li>
+                <li>Engineered a real-time coordination platform connecting food donors, NGOs, and volunteers to efficiently redistribute surplus edible food and reduce food wastage.</li>
+                <li>Built an innovative waste-management module to convert inedible food into organic fertilizer (slurry) via local biogas plants for distribution to farmers.</li>
+                <li>Designed an intuitive, user-friendly interface to optimize logistics and minimize food spoilage during the distribution process.</li>
             </ul>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title">MindHaven &ndash; Mental Health Platform</span>
+                <span class="item-title">MindHaven &ndash; Mental Health & Wellbeing Platform</span>
                 <span class="item-date">Full Stack Web Development</span>
             </div>
+            <div style="font-size: 12px; color: #555; margin-bottom: 3px;">
+                <a href="https://github.com/jinalmore019/MindHaven-" target="_blank" style="color: #1a0dab; text-decoration: none;">GitHub Repository</a>
+            </div>
             <ul>
-                <li>Developed a comprehensive online platform dedicated to promoting mental health awareness and wellbeing.</li>
-                <li>Created a safe, accessible space for users to explore wellness resources and track their mental health journey.</li>
-                <li>Focused on accessibility and user experience to provide seamless navigation and empathetic design.</li>
+                <li>Developed a comprehensive online platform dedicated to promoting mental health awareness, providing self-help resources, and enabling users to track their wellbeing journey.</li>
+                <li>Focused on accessibility and empathetic design to create a safe, inclusive space for users to explore mental health resources.</li>
+                <li>Implemented responsive, mobile-friendly UI with seamless navigation to ensure accessibility across all devices.</li>
             </ul>
         </div>
     </section>
 
+    <!-- ==================== CERTIFICATIONS & ACHIEVEMENTS ==================== -->
     <section>
-        <h2 class="section-title">Extracurricular & Achievements</h2>
+        <h2 class="section-title">Certifications & Achievements</h2>
         <ul>
-            <li><strong>National Cadet Corps (NCC):</strong> Hold an NCC 'B' Certificate with the rank of Lance Corporal (LCPL).</li>
-            <li>Actively participated in multiple hackathons, demonstrating rapid prototyping and collaborative problem-solving skills.</li>
-            <li>Continuously upskilling in Full Stack technologies to stay current with industry standards.</li>
+            <li><strong>NCC 'B' Certificate</strong> &ndash; National Cadet Corps, with the rank of <strong>Lance Corporal (LCPL)</strong>. Demonstrated leadership, discipline, and teamwork through rigorous training and camps.</li>
+            <li><strong>Hackathon Participant</strong> &ndash; Actively participated in multiple hackathons, demonstrating rapid prototyping, creative problem-solving, and effective team collaboration under time constraints.</li>
         </ul>
+    </section>
+
+    <!-- ==================== EXTRACURRICULAR ACTIVITIES ==================== -->
+    <section>
+        <h2 class="section-title">Extracurricular Activities</h2>
+        <ul>
+            <li>Active member of the National Cadet Corps (NCC), participating in parades, camps, and community service drives.</li>
+            <li>Continuously upskilling through online courses and self-learning in Full Stack Web Development and modern JavaScript frameworks.</li>
+            <li>Contributed to open-source projects and maintained an active GitHub profile with multiple repositories showcasing diverse technical projects.</li>
+        </ul>
+    </section>
+
+    <!-- ==================== LANGUAGES ==================== -->
+    <section>
+        <h2 class="section-title">Languages</h2>
+        <div class="skills-container">
+            <div class="skills-row">
+                <span class="skills-category">English</span> &ndash; Professional Working Proficiency
+                <span class="separator">|</span>
+                <span class="skills-category">Hindi</span> &ndash; Native / Fluent
+                <span class="separator">|</span>
+                <span class="skills-category">Gujarati</span> &ndash; Native / Fluent
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DECLARATION ==================== -->
+    <section style="margin-top: 20px;">
+        <h2 class="section-title">Declaration</h2>
+        <p class="objective">
+            I hereby declare that the information furnished above is true, complete, and correct to the best of my knowledge and belief.
+        </p>
+        <div style="display: flex; justify-content: space-between; margin-top: 16px; font-size: 13px;">
+            <div>
+                <strong>Date:</strong> _______________
+            </div>
+            <div>
+                <strong>Jinal More</strong>
+            </div>
+        </div>
     </section>
 
 </body>
